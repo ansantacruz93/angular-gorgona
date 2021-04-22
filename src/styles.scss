@@ -1,0 +1,56 @@
+
+@import 'scss/components//megaMenu';
+@import 'scss/components//card';
+@import 'scss/components//dropDown';
+@import "scss/fonts";
+@import "scss/variables";
+@import "scss/components/primeNG";
+
+
+body {
+    background-color: var(--color-cx-grey10);
+    color: var(--color-555555);
+    font-family: var(--font-family-open-sans);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-16);
+    line-height: var(--line-spacing-22);
+    letter-spacing: var(--character-spacing-0);
+    margin: 0 0;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+  }
+
+.app_body__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app_main__container {
+    background-color: var(--color-f8f8f8);
+    color: var(--color-secondary);
+    height: calc(100vh - (40px + 70px));
+  }
+

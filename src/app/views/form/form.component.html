@@ -1,0 +1,73 @@
+<h2 style="color: black; text-align: center">Campos Basicos</h2>
+<div class="p-fluid p-grid">
+  <div class="p-col-12 p-md-4">
+    <span class="p-float-label">
+      <input type="text" id="inputtext" pInputText />
+      <label for="inputtext">Texto</label>
+    </span>
+  </div>
+
+  <div class="p-col-12 p-md-4">
+    <span class="p-float-label">
+      <input type="number" id="inputtext" pInputText />
+      <label for="inputtext">Número basico</label>
+    </span>
+  </div>
+
+  <div class="p-col-12 p-md-4">
+    <span class="p-float-label">
+      <p-calendar
+        [monthNavigator]="true"
+        [yearNavigator]="true"
+        yearRange="2000:2030"
+        inputId="navigators"
+      ></p-calendar>
+      <label for="inputtext">Calendario</label>
+    </span>
+  </div>
+
+  <div class="p-col-12 p-md-4">
+    <span class="p-float-label">
+      <p-dropdown
+        [options]="countries"
+        [(ngModel)]="selectedCountry"
+        optionLabel="name"
+        [filter]="true"
+        filterBy="name"
+        [showClear]="true"
+        placeholder=" "
+      >
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value" *ngIf="selectedCountry">
+            <div>{{ selectedCountry.name }}</div>
+          </div>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <div>{{ country.name }}</div>
+          </div>
+        </ng-template>
+      </p-dropdown>
+      <label for="inputtext">Calendario</label>
+    </span>
+  </div>
+
+  <div class="p-col-12 p-md-4">
+    <span class="p-float-label">
+      <textarea
+        [rows]="5"
+        [cols]="30"
+        pInputTextarea
+        autoResize="autoResize"
+      ></textarea>
+      <label for="inputtext">Text Area autoajustable</label>
+    </span>
+  </div>
+</div>
+
+<h2 style="color: black; text-align: center">Editor de texto</h2>
+
+<div class="p-fluid p-grid"></div>
+<div class="p-col-12 p-md-12">
+  <p-editor [style]="{ height: '320px' }"></p-editor>
+</div>

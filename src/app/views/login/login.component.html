@@ -1,0 +1,73 @@
+<section class="auth_login__container">
+  <footer>
+    <div>
+      <img src="../../../assets/img/GorgonaApp.PNG" alt="" />
+    </div>
+  </footer>
+
+  <header>
+    <h2>Inicio de sesión</h2>
+    <p>Bienvenido a la demostración de código.</p>
+  </header>
+  <main>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <app-cx-field [label]="'Usuario'" [required]="true">
+        <input
+          formControlName="username"
+          name="userId"
+          id="userId"
+          maxlength="20"
+        />
+      </app-cx-field>
+
+      <div>
+        <app-cx-field [label]="'Contraseña'" [required]="true">
+          <input
+            formControlName="password"
+            class="password"
+            name="userPassword"
+            id="userPassword"
+            type="{{ typePassword }}"
+            maxlength="50"
+          />
+        </app-cx-field>
+        <div class="hide-show">
+          <span (click)="hidePassword()" *ngIf="!isHidePassword">Mostrar</span>
+          <span (click)="hidePassword()" *ngIf="isHidePassword">Ocultar</span>
+        </div>
+      </div>
+
+
+        <app-cx-check-box
+          (valueEvent)="receiveMessage()"
+          label="Recordar usuario."
+        ></app-cx-check-box>
+
+
+      <div>
+        <button
+          class="cx_button cx_button--primary"
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Ingresar
+        </button>
+      </div>
+
+      <section class="auth_login__container__resetInfo">
+        <span class="auth_login__container__resetInfo__tittle"
+          >¿Olvidó su contraseña?
+        </span>
+        <span
+          (click)="resetPasword()"
+          class="auth_login__container__resetInfo__link"
+          >Recupérela aquí</span
+        >
+      </section>
+
+
+    </form>
+  </main>
+</section>
+
+

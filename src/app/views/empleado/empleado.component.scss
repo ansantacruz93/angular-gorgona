@@ -1,0 +1,17 @@
+.app_empleado{
+  &__container{
+    &__crearEmpleado{
+      width: calc(100%/3 - 2*1em - 2*1px);
+      height: 50px;
+      position: fixed;
+      a{
+        text-decoration: none;
+      }
+
+    }
+
+    &__empleados{
+    margin-top: 60px;
+    }
+  }
+}

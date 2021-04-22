@@ -1,0 +1,30 @@
+<main class="app_card__container">
+
+  <div  [ngClass]="'app_card__container__cardCenter'" class="p-grid">
+
+
+    <div *ngFor="let empleado of listadoCard" [ngClass]="'app_card__container__cardCenter'" class="p-col-12 p-md-6 p-lg-6 p-xl-4">
+      <p-card  header="{{empleado.firstName}}" subheader="{{empleado.lastName}}"
+      [style]="{width: '360px'}" styleClass="p-card-shadow">
+
+      <ng-template pTemplate="header">
+        <img alt="Card"
+          src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg">
+      </ng-template>
+
+      <ol>
+        <li>E-mail: {{empleado.emailId}}</li>
+        <li>Telefono: {{empleado.telefono}}</li>
+        <li>Dirección: {{empleado.direccion}}</li>
+      </ol>
+
+      <ng-template pTemplate="footer">
+        <p-button label="Editar" (click)="editar()" icon="pi pi-check" styleClass="p-button-warning"></p-button>
+        <p-button (click)="sendMessageBorrar(empleado)" label="Borrar" icon="pi pi-times" styleClass="p-button-danger" [style]="{'margin-left': '.5em'}">
+        </p-button>
+      </ng-template>
+    </p-card>
+    </div>
+
+  </div>
+</main>

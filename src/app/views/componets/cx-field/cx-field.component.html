@@ -1,0 +1,15 @@
+<section class="cx-field__container">
+
+  <section class="cx-field__container__label">
+    <span>{{label}} <a *ngIf="required">*</a></span>
+  </section>
+
+  <section class="cx-field__container__field">
+      <ng-content></ng-content>
+  </section>
+
+  <section class="cx-field__container__message">
+  <ng-content select ="app-cx-error-message-group"></ng-content>
+  </section>
+</section>
+

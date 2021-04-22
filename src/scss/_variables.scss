@@ -1,0 +1,53 @@
+
+/* -- Variables --*/
+:root {
+
+  --color-cx-orange100: #F7941E;
+  --color-cx-orange50: #FCBB76;
+  --color-cx-blue100: #00798D;
+  --color-cx-blue50: #42ACB3;
+  --color-cx-blue30: #BAD9E0;
+  --color-cx-yellow100: #F5CD1D;
+
+  /* Colors: Gray Scale */
+  --color-cx-grey100: #555555;
+  --color-cx-grey80: #6B6B6B;
+  --color-cx-grey60: #9C9C9C;
+  --color-cx-grey40: #D7D7D7;
+  --color-cx-grey20: #EEEEEE;
+  --color-cx-grey10: #F8F8F8;
+  --color-cx-white: #FFFFFF;
+
+  /* Interaction */
+  --color-cx-interaction-default-active: #0377BD;
+  --color-cx-interaction-hover: #02588C;
+  --color-cx-interaction-disabled: #7EBBC2;
+
+  /* Feedback */
+  --color-cx-feedback-successes-dark: #005B46;
+  --color-cx-feedback-successes-default: #008768;
+  --color-cx-feedback-successes-light: #BFE1D9;
+  --color-cx-feedback-error-dark: #661321;
+  --color-cx-feedback-error-default: #E1275C;
+  --color-cx-feedback-error-light: #F2C2C6;
+  --color-cx-feedback-informative-dark: #006374;
+  --color-cx-feedback-informative-default: #006374;
+  --color-cx-feedback-informative-light: #DFF2F4;
+  --color-cx-feedback-warning-default: #5C4D0B;
+  --color-cx-feedback-warning-light: #FCF1C2;
+  --color-cx-feedback-orange-light: #F2D4B6;
+
+
+
+
+  /* Font/text values */
+  --font-family-open-sans: 'Open Sans';
+  --font-style-normal: normal;
+  --font-weight-bold: bold;
+  --font-weight-normal: normal;
+  --font-size-16: 16px;
+  --font-size-21: 21px;
+  --character-spacing-0: 0px;
+  --line-spacing-22: 22px;
+  --line-spacing-28: 28px;
+}

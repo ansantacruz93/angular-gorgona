@@ -1,0 +1,106 @@
+<form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">
+  <h2 style="color: black; text-align: center">Formulario</h2>
+  <div class="p-fluid p-grid">
+    <div class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input
+          type="text"
+          id="inputtext"
+          pInputText
+          formControlName="firstName"
+          [ngClass]="{ 'ng-invalid ng-dirty': submitted && f.firstName.invalid }"
+        />
+        <label for="inputtext">Nombres</label>
+      </span>
+      <app-invalid-from-message
+        *ngIf="submitted && f.firstName.errors?.required"
+      ></app-invalid-from-message>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input
+          type="text"
+          id="inputtext"
+          pInputText
+          formControlName="lastName"
+          [ngClass]="{ 'ng-invalid ng-dirty': submitted && f.lastName.invalid }"
+        />
+        <label for="inputtext">Apellidos</label>
+      </span>
+      <app-invalid-from-message
+        *ngIf="submitted && f.lastName.errors?.required"
+      ></app-invalid-from-message>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input
+          type="text"
+          id="inputtext"
+          pInputText
+          formControlName="emailId"
+          [ngClass]="{ 'ng-invalid ng-dirty': submitted && f.emailId.invalid }"
+        />
+        <label for="inputtext">Correo electronico</label>
+      </span>
+      <app-invalid-from-message
+        *ngIf="submitted && f.emailId.errors?.required"
+      ></app-invalid-from-message>
+
+      <app-invalid-from-message
+        *ngIf="f.emailId.errors?.email"
+        [message]="'Ingrese un correo electronico valido'"
+      ></app-invalid-from-message>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input
+          type="number"
+          id="inputtext"
+          pInputText
+          formControlName="telefono"
+          [ngClass]="{ 'ng-invalid ng-dirty': submitted && f.telefono.invalid }"
+        />
+        <label for="inputtext">Telefono</label>
+      </span>
+      <app-invalid-from-message
+        *ngIf="submitted && f.telefono.errors?.required"
+      ></app-invalid-from-message>
+    </div>
+
+    <div class="p-col-12 p-md-4">
+      <span class="p-float-label">
+        <input
+          type="text"
+          id="inputtext"
+          pInputText
+          formControlName="direccion"
+          [ngClass]="{'ng-invalid ng-dirty': submitted && f.direccion.invalid }"
+        />
+        <label for="inputtext">Direccion</label>
+      </span>
+      <app-invalid-from-message
+        *ngIf="submitted && f.direccion.errors?.required"
+      ></app-invalid-from-message>
+    </div>
+
+    <div class="app_crear_empleado__container__buttons">
+      <p-button
+      label="Crear"
+      icon="pi pi-check"
+      type="submit"
+      styleClass="p-button-primary"
+      ></p-button>
+
+      <p-button
+      label="Cancelar"
+      icon="pi pi-check"
+      (click)="onCancel()"
+      styleClass="p-button-danger"
+    ></p-button>
+
+    </div>
+  </div>
+</form>

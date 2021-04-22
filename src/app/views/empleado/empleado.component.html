@@ -1,0 +1,10 @@
+
+<section class="app_empleado__container__crearEmpleado">
+
+ <a href="http://localhost:4200/crearEmpleado">
+   <p-button (click)="crearEmpleado()" label="Crear empleado" icon="pi pi-check"></p-button>
+ </a>
+</section>
+<section class="app_empleado__container__empleados">
+  <app-card (messageBorrarEvent)="receiveMessageBorrar($event)" [listadoCard]="empleados"></app-card>
+</section>
